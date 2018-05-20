@@ -19,6 +19,8 @@ package com.example.android.teatime;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -38,6 +40,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 public class OrderActivityBasicTest {
 
     // TODO (2) / COMPLETED: Add the rule that provides functional testing of a single activity
+    @Rule
     public ActivityTestRule<OrderActivity> mActivityTestRule =
             new ActivityTestRule<>(OrderActivity.class);
 
@@ -46,6 +49,7 @@ public class OrderActivityBasicTest {
     //          - Click on the decrement button
     //          - Verify that the decrement button won't decrease the quantity 0 and cost below $0.00
 
+    @Test
     public void clickDecrementButton_ChangesQuantityAndCost() {
 
         // Check the initial quantity variable is zero
